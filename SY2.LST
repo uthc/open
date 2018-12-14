@@ -1,0 +1,58 @@
+A51 MACRO ASSEMBLER  SY2                                                                  10/18/2018 10:50:31 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.01
+OBJECT MODULE PLACED IN C:\USERS\ADMINISTRATOR\DESKTOP\SY12\SY2.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.EXE C:\USERS\ADMINISTRATOR\DESKTOP\SY12\SY2.ASM DB SB
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 2100              2     RESET:  AJMP MAIN
+0100                   3             ORG 0100H
+0100 758160            4     MAIN:   MOV SP,#60H
+0103 7831              5             MOV R0,#31H
+0105 7677              6                     MOV @R0,#77H    ;Ìá¸ßÊ±½«¼ÓÊ¸ßÎ»¸ÄÎª×Ô¶¨ÒåµÄÊµÄ¸ßÎ»£¨Èç66H£©
+0107 18                7                     DEC R0
+0108 7633              8                     MOV @R0,#33H    ;Ìá¸ßÊ±½«¼ÓÊµÍÎ»¸ÄÎª×Ô¶¨ÒåµÄÊµÄµÍÎ»£¨Èç77H£©
+010A 7921              9                     MOV R1,#21H
+010C 7799             10                     MOV @R1,#99H      ;Ìá¸ßÊ±×÷Îª±»¼ÓÊµÄ¸ßÎ»±»ÐÞ¸Ä£¨Èç¸ÄÎª44H£©
+010E 19               11                     DEC R1
+010F 7755             12                     MOV @R1,#55H     ;Ìá¸ßÊ±×÷Îª±»¼ÓÊµÄµÍÎ»±»ÐÞ¸Ä£¨Èç¸ÄÎª55H£©
+0111 7A02             13                     MOV R2,#02H
+0113 3117             14                     ACALL DACE
+0115 80FE             15     HERE:   SJMP HERE
+0117 C3               16     DACE:   CLR C
+0118 E6               17     DAL:    MOV A,@R0
+0119 37               18             ADDC A,@R1
+011A D4               19                     DA A
+011B F7               20                     MOV @R1,A
+011C 08               21                     INC R0
+011D 09               22                     INC R1
+011E DAF8             23                     DJNZ R2,DAL
+0120 E4               24                     CLR A
+0121 92E0             25                     MOV ACC.0,C
+0123 F7               26                     MOV @R1,A
+0124 22               27                     RET
+*** WARNING #A41 IN 27 (C:\USERS\ADMINISTRATOR\DESKTOP\SY12\SY2.ASM, LINE 27): MISSING 'END' STATEMENT
+A51 MACRO ASSEMBLER  SY2                                                                  10/18/2018 10:50:31 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ACC. . . . . . . .  D ADDR   00E0H   A   
+DACE . . . . . . .  C ADDR   0117H   A   
+DAL. . . . . . . .  C ADDR   0118H   A   
+HERE . . . . . . .  C ADDR   0115H   A   
+MAIN . . . . . . .  C ADDR   0100H   A   
+RESET. . . . . . .  C ADDR   0000H   A   
+SP . . . . . . . .  D ADDR   0081H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  1 WARNING(S), 0 ERROR(S)

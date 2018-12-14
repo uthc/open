@@ -1,0 +1,70 @@
+A51 MACRO ASSEMBLER  NONAME1                                                              10/18/2018 11:15:35 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.01
+OBJECT MODULE PLACED IN C:\USERS\ADMINISTRATOR\DESKTOP\SY12\NONAME1.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.EXE C:\USERS\ADMINISTRATOR\DESKTOP\SY12\NONAME1.ASM DB SB
+
+LOC  OBJ            LINE     SOURCE
+
+  000A                 1           SIZE EQU 10
+  0050                 2           ARRAY EQU 50H
+  0000                 3           CHANGE EQU 0
+0000                   4     ASN:
+0000 755009            5         MOV 50H,#09H
+0003 755119            6         MOV 51H,#19H
+0006 755209            7         MOV 52H,#09H
+0009 7553F0            8         MOV 53H,#0F0H
+000C 755409            9         MOV 54H,#09H
+000F 755502           10         MOV 55H,#02H
+0012 755600           11         MOV 56H,#00H
+0015 7557FF           12         MOV 57H,#0FFH
+0018 755805           13         MOV 58H,#05H
+001B 755939           14         MOV 59H,#39H
+                      15     
+001E                  16     SORT:
+001E 7850             17          MOV R0,#ARRAY
+0020 7F09             18          MOV R7, #SIZE-1
+0022 C200             19          CLR CHANGE
+0024                  20     GOON:
+0024 E6               21          MOV A,@R0
+0025 FA               22          MOV R2,A
+0026 08               23         INC R0
+0027 86F0             24         MOV B,@R0
+0029 B5F002           25         CJNE A,B,NOTEQUAL
+002C 8008             26         SJMP NEXT
+002E                  27     NOTEQUAL:
+002E 4006             28              JC NEXT
+0030 D200             29              SETB CHANGE
+0032 C6               30              XCH A,@R0
+0033 18               31              DEC R0
+0034 C6               32              XCH A,@R0
+0035 08               33              INC R0
+0036                  34     NEXT:
+0036 DFEC             35          DJNZ R7,GOON
+0038 2000E3           36          JB CHANGE,SORT
+003B 02003B           37          LJMP $
+                      38     END
+A51 MACRO ASSEMBLER  NONAME1                                                              10/18/2018 11:15:35 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ARRAY. . . . . . .  N NUMB   0050H   A   
+ASN. . . . . . . .  C ADDR   0000H   A   
+B. . . . . . . . .  D ADDR   00F0H   A   
+CHANGE . . . . . .  N NUMB   0000H   A   
+GOON . . . . . . .  C ADDR   0024H   A   
+NEXT . . . . . . .  C ADDR   0036H   A   
+NOTEQUAL . . . . .  C ADDR   002EH   A   
+SIZE . . . . . . .  N NUMB   000AH   A   
+SORT . . . . . . .  C ADDR   001EH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

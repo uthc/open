@@ -1,0 +1,65 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/18/2018  10:55:48  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE C:\USERS\ADMINISTRATOR\DESKTOP\SY12\SY1.OBJ TO C:\USERS\ADMINISTRATOR\DESKTOP\SY12\SY1 RS (256)
+>> 
+
+
+INPUT MODULES INCLUDED:
+  C:\USERS\ADMINISTRATOR\DESKTOP\SY12\SY1.OBJ (SY1)
+
+
+LINK MAP OF MODULE:  C:\USERS\ADMINISTRATOR\DESKTOP\SY12\SY1 (SY1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0058H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  C:\USERS\ADMINISTRATOR\DESKTOP\SY12\SY1 (SY1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        SY1
+  C:0045H         SYMBOL        A1
+  C:0050H         SYMBOL        A2
+  C:0056H         SYMBOL        A3
+  C:003FH         SYMBOL        MAIN
+  C:0000H         SYMBOL        RESET
+  C:0000H         LINE#         2
+  C:003FH         LINE#         4
+  C:0041H         LINE#         5
+  C:0043H         LINE#         6
+  C:0045H         LINE#         7
+  C:0046H         LINE#         8
+  C:0047H         LINE#         9
+  C:0048H         LINE#         10
+  C:004AH         LINE#         12
+  C:004CH         LINE#         13
+  C:004EH         LINE#         14
+  C:0050H         LINE#         16
+  C:0051H         LINE#         17
+  C:0052H         LINE#         18
+  C:0053H         LINE#         19
+  C:0054H         LINE#         20
+  C:0056H         LINE#         21
+  -------         ENDMOD        SY1
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 001BH BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=88
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/18/2018  10:55:48  PAGE 2
+
+
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

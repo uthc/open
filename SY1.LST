@@ -1,0 +1,50 @@
+A51 MACRO ASSEMBLER  SY1                                                                  10/18/2018 10:55:48 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.01
+OBJECT MODULE PLACED IN C:\USERS\ADMINISTRATOR\DESKTOP\SY12\SY1.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.EXE C:\USERS\ADMINISTRATOR\DESKTOP\SY12\SY1.ASM DB SB
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 013F              2     RESET:   AJMP MAIN
+003F                   3             ORG 003FH
+003F 7840              4     MAIN:   MOV R0,#40H
+0041 7A20              5             MOV R2,#20H          ;提高时将10H改为20H
+0043 7400              6             MOV  A,#00H          ;提高时将0A0H改为00H
+0045 F6                7     A1:     MOV @R0,A
+0046 08                8             INC R0
+0047 04                9             INC A
+0048 DAFB             10             DJNZ R2,A1  
+                      11             
+004A 7840             12             MOV R0,#40H
+004C 7960             13             MOV R1,#60H          ;提高时将50H改为60H
+004E 7A20             14             MOV R2,#20H          ;提高时将10H改为20H
+                      15             
+0050 E6               16     A2:     MOV A,@R0
+0051 F7               17             MOV @R1,A
+0052 08               18             INC R0
+0053 09               19             INC R1
+0054 DAFA             20             DJNZ R2,A2
+0056 80FE             21     A3:     SJMP A3
+*** WARNING #A41 IN 21 (C:\USERS\ADMINISTRATOR\DESKTOP\SY12\SY1.ASM, LINE 21): MISSING 'END' STATEMENT
+A51 MACRO ASSEMBLER  SY1                                                                  10/18/2018 10:55:48 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+A1 . . . . . . . .  C ADDR   0045H   A   
+A2 . . . . . . . .  C ADDR   0050H   A   
+A3 . . . . . . . .  C ADDR   0056H   A   
+MAIN . . . . . . .  C ADDR   003FH   A   
+RESET. . . . . . .  C ADDR   0000H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  1 WARNING(S), 0 ERROR(S)
